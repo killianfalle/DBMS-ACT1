@@ -1,0 +1,27 @@
+CREATE TABLE SKILLS
+(
+	id int(15) NOT null,
+    description char (15) not null,
+    FOREIGN KEY (id) REFERENCES PERSON (id)
+);
+
+
+
+
+INSERT INTO SKILLS
+VALUES
+	(1, "Modeling"),
+    (2,"Singing"), 
+    (3,"Playing Computer"), 
+    (4,"Programming"), 
+    (5,"Surfing"), 
+    (6,"Eating"), 
+    (7,"Selfie"), 
+    (8,"Designing"), 
+    (9,"Programming"), 
+    (10,"Singing");
+
+
+SELECT person.id, person.firstName, person.lastName, skills.description
+FROM person ,skills 
+WHERE person.id = skills.id
